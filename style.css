@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: gray;
+}
+ p{
+     float: right;
+     padding: .5em;
+     font-weight: bold;
+     color: orangered;
+ } 
+
+h2{
+    text-align: center;
+    margin: 1em;
+    color: white;
+}
+
+#game{
+    margin: 0 auto;
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+    background: url(./bg-2.jpg) ;
+    background-size: 120% 100%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px;
+    border-bottom: 10px solid;
+}
+
+.character{
+    margin-left: 3em;
+    width: 50px;
+    height: 60px;
+    background: url(./char.png);
+    background-size: 100% 100%;
+    position: relative;
+    top: 140px;
+
+}
+.animate{ 
+    animation: jump 1s infinite ;
+}
+
+@keyframes jump{
+    0%{top: 150px;}
+    50%{top: 100px;}
+    70%{top:100px}
+    100%{top: 100px;}
+}
+
+ #block{
+     width: 60px;
+     height: 60px;
+     position: relative;
+     top: 100px;
+     left: 480px;
+     animation: blocks 2s infinite linear;
+    background:url(./tree.png);
+    background-size: 100% 100%;
+ } 
+
+ @keyframes blocks{
+     0%{left: 480px;}
+     100%{left: -10px;}
+
+ }
+
+ /* button style */
+
+ .btn {
+     background: rgb(204, 204, 204);
+     padding: .5em;
+     font-size: 22px;
+     margin:0 auto;
+     display: none;
+     border-radius: 10px;
+ }
+ .btn:hover{
+    background: rgb(136, 136, 136);
+ }
+
+ /* score  */
+ 
+ .score{
+     position: relative;
+     bottom: 3em;
+     font-size: 20px;
+     font-weight: 700;
+     margin-left: 1em;
+     color: rgb(166, 192, 248);
+ }
+
+ 
