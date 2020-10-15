@@ -21,6 +21,14 @@ const jump = (e) => {
     }
 }
 
+const jumpByClick = () => {
+    count.innerHTML = score++      
+        char.classList.add("animate");
+        setTimeout(function(){
+            char.classList.remove("animate");
+        },500)
+}
+
 const checkDead = setInterval(() => {
     let charTop = parseInt( window.getComputedStyle(char)
     .getPropertyValue("top"));
@@ -39,4 +47,4 @@ const checkDead = setInterval(() => {
 
 document.addEventListener("keyup",jump)
 btn.addEventListener("click", () =>location.reload());
-   
+document.body.addEventListener("click",jumpByClick,true );
