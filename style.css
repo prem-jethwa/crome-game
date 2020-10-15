@@ -5,6 +5,7 @@
 }
 body{
     background: gray;
+    margin: .5em;
 }
  p{
      float: right;
